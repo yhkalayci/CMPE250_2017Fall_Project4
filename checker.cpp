@@ -34,7 +34,7 @@ int main(int argc, char **args){
         }
         else if(flag1==EOF || flag2==EOF){
             printf("0\n");
-            printf("Headers are different\n");
+            printf("Number of words are does not match. i.e. number of written values does not match.\n");
             return 0;
         }
         
@@ -43,7 +43,7 @@ int main(int argc, char **args){
         flag2 = isNumber(str2);
         if(flag1!=flag2 || (!flag1 && !flag2 && str1!=str2)){
             printf("0\n");
-            printf("Headers are different\n");
+            printf("Headers are different.\n");
             return 0;
         }
 
@@ -53,7 +53,7 @@ int main(int argc, char **args){
             double val2 = stod(cstr2);
             if(fabs((val1-val2)/val1)>precision && fabs(val1)>precision and fabs(val2)>precision){
                 printf("0\n");
-                printf("Written values are different values = %lf and %lf", val1, val2);
+                printf("Written values are different. values = %lf and %lf", val1, val2);
                 return 0;
             }
         }
